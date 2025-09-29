@@ -8,8 +8,8 @@
 </head>
 <body>
   <ul class="menu">
-      <li><a href="HtmlCssBasic_A_12111.html" >Kembali ke Halaman Utama</a></li>
-      <li><a href="HtmlForm_A_12111.html" >Halaman Form</a></li>
+      <li><a href="HtmlCssBasic_B_12512.html" >Kembali ke Halaman Utama</a></li>
+      <li><a href="HtmlForm_B_12512.html" >Halaman Form</a></li>
       <!-- TODO: Pada bagian menu tambahkan Dialog box confirm ketika mengklik link tersebut. Clue : Gunakan OnClick dan return. -->
   </ul>
 
@@ -40,26 +40,54 @@
   <script>
      // TODO: Buat fungsi ubahBiru() untuk mengubah teks di elemen dengan id="teks" menjadi "Teks sudah berubah menjadi biru!" 
      // dan warnanya menjadi biru.
-    
+    function ubahBiru(){
+      let paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Teks Sudah Berubah Menjadi Biru!";
+      paragraf.style.color = "blue";
+    }
     // TODO: Buat fungsi ubahMerah() untuk mengubah teks di elemen dengan id="teks" menjadi "Sekarang teks berwarna merah!" 
     // dan warnanya menjadi merah.
-    
+    function ubahMerah(){
+      let paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Sekarang Teks Berwarna Merah!";
+      paragraf.style.color = "red";
+    }
     // TODO: Buat fungsi ubahHijau() untuk mengubah teks di elemen dengan id="teks" menjadi "Sekarang teks berwarna hijau!" 
     // dan warnanya menjadi hijau.
-
+    function ubahHijau(){
+      let paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Sekarang teks berwarna hijau!";
+      paragraf.style.color = "green";
+    }
     // Clue ketiga function diatas : gunakan document.getElementById, paragraf.innerHTML, dan paragraf.style.color
-    
-    
-    // TODO: Buat fungsi tampilkanNama() yang mengambil nilai dari input dengan id="inputNama". 
-    // Jika kosong, tampilkan alert "Silakan isi nama dulu." 
+    // TODO: Buat fungsi tampilkanNama() yang mengambil nilai dari input dengan id="inputNama".
+    // Jika kosong, tampilkan alert "Silakan isi nama dulu."
     // Jika ada isinya, tampilkan alert "Halo, [nama]! Selamat Belajar HTML & JS :D".
     // Clue : gunakan document.getElementById("inputNama").value dan gunakan statement if else.
-    
+    function tampilkanNama(){
+      let inputNama = document.getElementById("inputNama").value;
+      if(inputNama === ""){
+        alert("Silahkan isi nama dulu.");
+      }else{
+        alert("Halo " +inputNama+ "! Selamat Belajar HTML & JS :D");
+      }
+    }
     // TODO: Buat fungsi hitungKuadrat() yang mengambil nilai dari input dengan id="angka". 
     // Jika kosong, tampilkan pesan "Masukkan angka terlebih dahulu." di elemen dengan id="hasil". 
     // Jika ada isinya, hitung kuadrat angka tersebut dan tampilkan "Hasil kuadrat dari [angka] adalah [hasil]" 
     // di elemen dengan id="hasil".
     // Clue : gunakan document.getElementById("angka").value dan gunakan hasil.innerHTML.
+    function hitungKuadrat(){
+      let inputAngka = document.getElementById("angka").value;
+      let hasil = document.getElementById("hasil");
+      let hitungkuadrat;
+      if(inputAngka === ""){
+        hasil.innerHTML = "Masukkan angka terlebih dahulu.";
+      }else{
+        hitungkuadrat = inputAngka * inputAngka;
+        hasil.innerHTML = "Hasil Kuadrat Dari " +inputAngka+ " Adalah " +hitungkuadrat+ "";
+      }
+    }
   </script>
 </body>
 </html>
