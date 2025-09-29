@@ -18,29 +18,99 @@
     <table cellspacing="4" cellpadding="4">
       <!-- TODO: Tambahkan field input teks untuk Nama Mahasiswa dengan tipe teks dan WAJIB DIISI. -->
       <tr>
-        <td><strong>Nama Mahasiswaaa</strong></td>
-        <td><input required type="text" size = "30"></td>
+        <td><strong>Nama Mahasiswa</strong></td>
+        <td><input required type="text" name = "namamhs" size = "30"></td>
       </tr>
       <!-- TODO: Tambahkan field radio button untuk Jenis Kelamin (Laki-laki dan Perempuan) dan WAJIB DIISI -->
+      <tr>
+        <td><strong>Jenis Kelamin</strong></td>
+        <td>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Laki-Laki</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Perempuan</label>
+        </td>
+      </tr>
 
       <!-- TODO: Tambahkan dropdown untuk Program Studi dengan id="prodi",
           opsi: "Pilih Prodi", "Informatika", "Teknik Industri", "Sistem Informasi" dan WAJIB DIISI. -->
-
+        <tr>
+          <td><strong>Program Studi</strong></td>
+          <td>
+            <select name="prodi" id="prodi">
+              <option value="pilihProdi">Pilih Prodi</option>
+              <option value="informatika">Informatika</option>
+              <option value="teknikIndustri">Teknik Industri</option>
+              <option value="sistemInformasi">Sistem Informasi</option>
+            </select>
+          </td>
+        </tr>
       <!-- TODO: Tambahkan field input angka untuk Nomor Telepon dengan tipe number dan WAJIB DIISI. -->
-
+      <tr>
+        <td><strong>Nomor Telepon</strong></td>
+        <td><input required type="number" name = "nomortelepon" size = "30"></td>
+      </tr>
       <!-- TODO: Tambahkan field input tanggal untuk Tanggal Lahir dengan tipe date dan WAJIB DIISI. -->
-
+      <tr>
+        <td><strong>Tanggal Lahir</strong></td>
+        <td><input required type="date" name = "tanggalLahir" size = "30"></td>
+      </tr>
       <!-- TODO: Tambahkan field input email dengan tipe email dan WAJIB DIISI. -->
-
+      <tr>
+        <td><strong>Email</strong></td>
+        <td><input required type="email" name = "emailMahasiswa" size = "30"></td>
+      </tr>
       <!-- TODO: Tambahkan field input password dengan tipe password dan WAJIB DIISI. -->
-
+      <tr>
+        <td><strong>Password</strong></td>
+        <td><input required type="password" name = "passwordMahasiswa" size = "30"></td>
+      </tr>
       <!-- TODO: Tambahkan fieldset untuk Hal Favorit, berisi:
           - Fieldset "Game" dengan checkbox untuk Roblox, Magic Chess, dan beberapa game lain yang ingin kamu tambahkan.
           - Fieldset "Film" dengan checkbox untuk Drama, Action, Romance, Comedy, Horror.
       -->
+      <tr>
+        <td><strong>Hal Favorit</strong></td>
+        <td>
+          <fieldset>
+              <legend>Game</legend>
+              <input type="checkbox" id="game1" name="game" value="Roblox">
+              <label for="game1">Roblox</label>
+              <br>
+              <input type="checkbox" id="game2" name="game" value="Magic Chess">
+              <label for="game2">Magic Chess</label>
+              <br>
+              <input type="checkbox" id="game3" name="game" value="Stardew Valley">
+              <label for="game3">Stardew Valley</label>
+              <br>
+              <input type="checkbox" id="game4" name="game" value="Valorant">
+              <label for="game4">Valorant</label>
+              <br>
+          </fieldset>
+
+          <fieldset>
+              <legend>Film</legend>
+              <input type="checkbox" id="film1" name="film" value="Drama">
+              <label for="film1">Drama</label>
+              <br>
+              <input type="checkbox" id="film2" name="film" value="Action">
+              <label for="film2">Action</label>
+              <br>
+              <input type="checkbox" id="film3" name="film" value="Comedy">
+              <label for="film3">Comedy</label>
+              <br>
+              <input type="checkbox" id="film4" name="film" value="Horror">
+              <label for="film4">Horror</label>
+              <br>
+            </fieldset>
+        </td>
+      </tr>
           
       <!-- TODO: Tambahkan textarea untuk Deskripsi dengan id="deskripsi" dan WAJIB DIISI. -->
-
+      <tr>
+        <td><strong>Deskripsi</strong></td>
+        <td><textarea required name="deskripsi" id="deskripsi"></textarea></td>
+      </tr>
       <!-- TODO: Tambahkan field input Foto dengan tipe file dan WAJIB DIISI. -->
 
       <!-- TODO: Tambahkan tombol submit dengan id="simpan" dan value="Simpan". -->
